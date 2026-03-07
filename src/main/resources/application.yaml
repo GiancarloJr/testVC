@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: vidyatest
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vidyadb
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+  jwt:
+    secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+    expiration: 86400000
+    refresh-expiration: 604800000
+
+server:
+  port: 8080
+
+cors:
+  allowed-origins: http://localhost:4200
+
+vydia:
+  encryptor:
+    algorithm: "HmacSHA256"
+
+sankhya:
+  base-url: ${SANKHYA_BASE_URL:http://snkrecifedev.fmcdatacom.com.br:8810}
+  username: ${SANKHYA_USERNAME:TESTEAPI}
+  password: ${SANKHYA_PASSWORD:1234567}
+  url-login: ${SANKHYA_URL_LOGIN:/mge/service.sbr?serviceName=MobileLoginSP.login&outputType=json}
+  url-base-services: ${SANKHYA_URL_BASE_SERVICES:/mge/service.sbr?serviceName={service}&outputType=json}
+
+receitaws:
+  base-url: ${RECEITAWS_BASE_URL:https://receitaws.com.br}
