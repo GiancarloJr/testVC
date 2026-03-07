@@ -1,0 +1,314 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Estudo
+meta:
+  id: wrk_b0d01746ad30442e891e7415f96145ad
+  created: 1760800074561
+  modified: 1769478162912
+  description: ""
+collection:
+  - name: Task
+    meta:
+      id: fld_f541681e9a3a48a9893d5debe6068e4e
+      created: 1772651039788
+      modified: 1772651039788
+      sortKey: -1772651039788
+      description: ""
+  - name: Votos
+    meta:
+      id: fld_3acf7c5498e249cab65ca6f4b370951a
+      created: 1772651076404
+      modified: 1772651076404
+      sortKey: -1772651076404
+      description: ""
+  - name: API Sankhya - Teste Técnico
+    meta:
+      id: fld_f9aa1387c3854aa3941de4e176a42925
+      created: 1772718617015
+      modified: 1772736419891
+      sortKey: -1772718614314
+      description: ""
+  - name: Vidya Teste Tecnico Giancarlo
+    meta:
+      id: fld_0a86688f8b584bb3942a14aff1f4ccc5
+      created: 1772899877048
+      modified: 1772900094268
+      sortKey: -1772899877048
+      description: ""
+    children:
+      - url: http://localhost:8080/api/auth/login
+        name: Login
+        meta:
+          id: req_bfa277d204504f528d7417e1ba010aa8
+          created: 1771456802964
+          modified: 1772899905338
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890019.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "giancarlo456@hotmail.com",
+            	"password":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/auth/register
+        name: Register
+        meta:
+          id: req_c45ccba15a9443de88d9bb25eb9c1198
+          created: 1771456844771
+          modified: 1772899903714
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890025.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Giancarlo",
+            	"email": "giancarlo456@hotmail.com",
+            	"password":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/clients
+        name: Salvar Cliente
+        meta:
+          id: req_532c9ae3e4c74ede95cc5cb2eb9c4ece
+          created: 1772654727382
+          modified: 1772899899980
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890013
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeParc": "Empresa Exemplo LTDA",
+              "razaoSocial": "Empresa Exemplo Comércio e Serviços LTDA",
+              "cgcCpf": "30307141000112",
+              "personType": "JURIDICA",
+              "codCid": 10,
+              "classificms": "C"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWR5YS1hcGkiLCJzdWIiOiIxIiwiZXhwIjoxNzcyOTg1MTE2LCJpYXQiOjE3NzI4OTg3MTYsImVtYWlsIjoiZ2lhbmNhcmxvNDU2QGhvdG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIl19.vMWknlE0ZwGe9Yt7G__EJfM5hSN9oEKZWRNvHrNunXc
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/cities
+        name: Buscar Cidades
+        meta:
+          id: req_3baba22b5a4841f59ab7dd911d5a51de
+          created: 1772677676591
+          modified: 1772900018685
+          isPrivate: false
+          description: ""
+          sortKey: -1772899889863
+        method: GET
+        parameters:
+          - name: name
+            value: PALMAS
+            disabled: true
+          - name: codCid
+            value: 2,3,4,5,6,7,10000
+            disabled: true
+          - name: page
+            value: "0"
+            description: ""
+            disabled: false
+        headers:
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0YXNrLWFwaSIsInN1YiI6IjEiLCJleHAiOjE3NzI5MzMzMDcsImlhdCI6MTc3Mjg0NjkwNywiZW1haWwiOiJnaWFuY2FybG80NTZAaG90bWFpbC5jb20iLCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.NtT_5i9pZRaxgG3NheBZy9DtT-cnMm0P6iOd9gH9HCM
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/cnpj
+        name: Buscar Clientes Receita
+        meta:
+          id: req_f68f70222cbd4a4eb51d30b4d1384920
+          created: 1772736470305
+          modified: 1772900007419
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890063
+        method: GET
+        parameters:
+          - name: cnpj
+            value: "57552432000122"
+            description: ""
+            disabled: false
+        headers:
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0YXNrLWFwaSIsInN1YiI6IjEiLCJleHAiOjE3NzI4NTA5MzcsImlhdCI6MTc3Mjc2NDUzNywiZW1haWwiOiJnaWFuY2FybG80NTZAaG90bWFpbC5jb20iLCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.5dXyoeqjGmg9Uhw5-prW1e-qwDtQbOgDxsvZLQQbgik
+            description: ""
+            disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/clients
+        name: Buscar Clientes
+        meta:
+          id: req_2304b87f39f44884b7d7148401c09d8e
+          created: 1772744326547
+          modified: 1772900025420
+          isPrivate: false
+          description: ""
+          sortKey: -1772899889963
+        method: GET
+        parameters:
+          - name: page
+            value: "0"
+            description: ""
+            disabled: false
+          - name: codParc
+            value: "2"
+            description: ""
+            disabled: true
+          - name: cgcCpf
+            value: "11491445000138"
+            description: ""
+            disabled: true
+        headers:
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWR5YS1hcGkiLCJzdWIiOiIxIiwiZXhwIjoxNzcyOTg1MTE2LCJpYXQiOjE3NzI4OTg3MTYsImVtYWlsIjoiZ2lhbmNhcmxvNDU2QGhvdG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIl19.vMWknlE0ZwGe9Yt7G__EJfM5hSN9oEKZWRNvHrNunXc
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/internal/sankhya/session/refresh
+        name: Refresh Session Sankhya
+        meta:
+          id: req_a87f28cf644649078261c53329dc9257
+          created: 1772821493575
+          modified: 1772899901911
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890038
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ2aWR5YS1hcGkiLCJzdWIiOiIxIiwiZXhwIjoxNzcyOTg1MTE2LCJpYXQiOjE3NzI4OTg3MTYsImVtYWlsIjoiZ2lhbmNhcmxvNDU2QGhvdG1haWwuY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIl19.vMWknlE0ZwGe9Yt7G__EJfM5hSN9oEKZWRNvHrNunXc
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/api/auth/refresh
+        name: Refresh Token
+        meta:
+          id: req_924a3fc55d7346abbaaa8cc255aaff73
+          created: 1772831452514
+          modified: 1772899906926
+          isPrivate: false
+          description: ""
+          sortKey: -1772899890022.375
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"refreshToken": "e420b3cc-e61e-4ec7-b48e-e1e617bfe842"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_42e96f27e2aeed5c586ff1166e74fbf69b2ef9f9
+    created: 1769478151150
+    modified: 1772836904610
+  cookies:
+    - id: fc7262ac-0ade-4537-8ad7-bf67659f10ac
+      key: JSESSIONID
+      value: WYoiY17snXJQGoiHQLKXLjc887iXoP6V7ocDabdn.master
+      domain: snkrecifedev.fmcdatacom.com.br
+      path: /mge
+      secure: false
+      httpOnly: false
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_42e96f27e2aeed5c586ff1166e74fbf69b2ef9f9
+    created: 1760800074563
+    modified: 1769478151101
+    isPrivate: false
