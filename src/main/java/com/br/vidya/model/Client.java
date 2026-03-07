@@ -7,8 +7,6 @@ import com.br.vidya.model.enums.PersonType;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "clients")
 @Getter
@@ -22,10 +20,10 @@ public class Client {
     @Column(name = "cod_parc")
     private Long codParc;
 
-    @Column(name = "nome_parc", nullable = false, length = 255)
+    @Column(name = "nome_parc", nullable = false)
     private String nomeParc;
 
-    @Column(name = "razao_social", length = 255)
+    @Column(name = "razao_social")
     private String razaoSocial;
 
     @Column(name = "cgc_cpf", length = 20)

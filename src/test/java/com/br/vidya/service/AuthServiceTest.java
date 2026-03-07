@@ -87,7 +87,6 @@ class AuthServiceTest {
     @Test
     void login_shouldThrowException_whenAuthenticationFails() {
         var request = mock(LoginRequest.class);
-        var user = mock(User.class);
 
         when(request.email()).thenReturn("user@test.com");
 

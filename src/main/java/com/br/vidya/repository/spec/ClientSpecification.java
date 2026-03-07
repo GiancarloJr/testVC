@@ -1,7 +1,6 @@
 package com.br.vidya.repository.spec;
 
 import com.br.vidya.model.Client;
-import com.br.vidya.model.enums.PersonType;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 

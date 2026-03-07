@@ -1,7 +1,6 @@
 package com.br.vidya.integration.receita.service;
 
 import com.br.vidya.integration.receita.dto.ReceitaResponse;
-import com.br.vidya.exception.BusinessException;
 import com.br.vidya.integration.receita.gateway.ReceitaGateway;
 import com.br.vidya.integration.receita.utils.CnpjUtils;
 import lombok.AllArgsConstructor;

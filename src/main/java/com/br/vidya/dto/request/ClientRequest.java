@@ -1,6 +1,5 @@
 package com.br.vidya.dto.request;
 
-import com.br.vidya.model.enums.PersonType;
 import jakarta.validation.constraints.*;
 
 public record ClientRequest(

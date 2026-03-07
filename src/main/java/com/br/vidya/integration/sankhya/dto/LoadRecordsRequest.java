@@ -25,9 +25,6 @@ public record LoadRecordsRequest(
             Expression expression,
             List<Parameter> parameter
     ) {
-        public Criteria(String expression) {
-            this(new Expression(expression),null);
-        }
     }
 
     public record Expression(
