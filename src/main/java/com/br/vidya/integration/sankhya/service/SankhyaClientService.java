@@ -64,7 +64,7 @@ public class SankhyaClientService extends SankhyaAbstractService{
                 "Error loading clients from Sankhya ERP"
         );
 
-        validateCodeResponse(response.status(), response.statusMessage());
+        validateCodeResponse(this.getClass().getSimpleName(),response.status(), response.statusMessage());
 
         return response;
     }
@@ -77,7 +77,7 @@ public class SankhyaClientService extends SankhyaAbstractService{
                 "Error saving client to Sankhya ERP"
         );
 
-        validateCodeResponse(response.status(), response.statusMessage());
+        validateCodeResponse(this.getClass().getSimpleName(),response.status(), response.statusMessage());
 
         return response;
     }

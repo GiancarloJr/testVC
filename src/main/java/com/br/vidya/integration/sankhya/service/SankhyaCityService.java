@@ -58,7 +58,7 @@ public class SankhyaCityService extends SankhyaAbstractService{
                 "Error loading cities from Sankhya ERP"
         );
 
-        validateCodeResponse(response.status(), response.statusMessage());
+        validateCodeResponse(this.getClass().getSimpleName(),response.status(), response.statusMessage());
 
         return response;
     }

@@ -27,11 +27,11 @@ public abstract class SankhyaAbstractService {
         );
     }
 
-    protected void validateCodeResponse(String code, String message) {
+    protected void validateCodeResponse(String className,String code, String message) {
         switch (code) {
             case "3" -> throw new SankhyaAuthorizationException(message);
             case "0" -> throw new SankhyaApiException(message);
-            case "1" -> log.info("Sankhya API response successful");
+            case "1" -> log.info("Sankhya API response successful - Service: {}", className);
             default -> log.error("Unknown code: {}", code);
         }
 

@@ -6,7 +6,7 @@
 
     <changeSet id="001-create-user-table" author="gmartins">
         <createTable tableName="users">
-            <column name="user_id" type="int" autoIncrement="true">
+            <column name="user_id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(150)">

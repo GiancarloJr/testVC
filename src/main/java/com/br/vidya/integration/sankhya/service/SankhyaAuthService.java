@@ -84,7 +84,7 @@ public class SankhyaAuthService {
                     .body(MobileLoginResponse.class);
 
         } catch (Exception e) {
-            throw new SankhyaApiException("Erro na api do Sankhya: " + e.getMessage());
+            throw new SankhyaApiException("Error during Sankhya login: " + e.getMessage());
         }
 
     }

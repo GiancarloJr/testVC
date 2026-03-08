@@ -16,7 +16,7 @@ API REST desenvolvida com Spring Boot, PostgreSQL e autenticação JWT.
 **1. Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/testVC.git
+git clone https://github.com/GiancarloJr/testVC.git
 cd testVC
 ```
 
@@ -77,19 +77,6 @@ Para autenticar no Swagger UI:
 
 ---
 
-### 🛑 Parando os containers
-
-```bash
-docker-compose down
-```
-
-> Para remover também os volumes (apaga os dados do banco):
-> ```bash
-> docker-compose down -v
-> ```
-
----
-
 ### 🔧 Variáveis de Ambiente
 
 As variáveis abaixo são configuradas automaticamente pelo `docker-compose.yml`, mas podem ser sobrescritas conforme necessário:
@@ -99,3 +86,40 @@ As variáveis abaixo são configuradas automaticamente pelo `docker-compose.yml`
 | `SPRING_DATASOURCE_URL`     | `jdbc:postgresql://postgres:5432/vidyadb` |
 | `SPRING_DATASOURCE_USERNAME`| `admin`                                   |
 | `SPRING_DATASOURCE_PASSWORD`| `admin`                                   |
+
+
+---
+
+### Resultados:
+
+1. Buscar dados por CNPJ na Api da Receita:
+
+![img.png](images/img.png)
+
+2. Fazer refresh no JSESSIONID do Sankhya:
+
+![img_1.png](images/img_1.png)
+
+3. Registro de Usuario no Client:
+
+![img_2.png](images/img_2.png)
+
+4. Refresh Token de Usuario no Client:
+
+![img_3.png](images/img_3.png)
+
+5. Login no Client:
+
+![img_4.png](images/img_4.png)
+
+6. Salvar Cliente no Sankhya:
+
+![img_5.png](images/img_5.png)
+
+7. Buscar Clientes no Sankhya:
+
+![img_6.png](images/img_6.png)
+
+8. Buscar Cidades no Sankhya:
+
+![img_7.png](images/img_7.png)

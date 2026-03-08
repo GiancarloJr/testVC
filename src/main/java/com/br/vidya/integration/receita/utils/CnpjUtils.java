@@ -6,6 +6,6 @@ import lombok.experimental.UtilityClass;
 public class CnpjUtils {
 
     public String sanitize(String cnpj) {
-        return cnpj.replaceAll("[^0-9]", "");
+        return cnpj.replaceAll("[^0-9]", "").trim();
     }
 }
